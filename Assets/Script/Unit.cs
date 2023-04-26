@@ -21,6 +21,7 @@ public class Unit : MonoBehaviour
     public void MoveToPosition(Vector2 position)
     {
         agent.isStopped = true;
+        Debug.Log("Moving");
         agent.SetDestination(position);
     }
 }
