@@ -4,15 +4,11 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [Header("Units")]
+    public List<Unit> units;
 
-    // Update is called once per frame
-    void Update()
+    public bool isMyUnit(Unit unit)
     {
-        
+        return units.Contains(unit);
     }
 }
