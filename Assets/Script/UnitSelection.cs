@@ -24,6 +24,7 @@ public class UnitSelection : MonoBehaviour
         if(Input.GetMouseButtonDown(0))
         {
             TogggleSelectionVisual(false);
+            selectedUnits = new List<Unit>();
             TrySelect(Input.mousePosition);
             startPos = Input.mousePosition;
 
@@ -95,6 +96,16 @@ public class UnitSelection : MonoBehaviour
         {
             unit.TogggleSelectionVisual(selected);
         }
+    }
+
+    public bool HasUnitsSelected()
+    {
+        return selectedUnits.Count > 0;
+    }
+
+    public Unit[] GetSelectedUnits()
+    {
+        return selectedUnits.ToArray();
     }
     
 }
