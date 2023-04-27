@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class UnitCommander : MonoBehaviour
 {
-    public GameObject SelectionMarker;
-    public LayerMask layerMask;
-
+    public GameObject SelectionMarkerPrefab;
+    public LayerMask layerMask;   
     private UnitSelection unitSelection;
     private Camera cam;
 
@@ -48,5 +47,10 @@ public class UnitCommander : MonoBehaviour
         {
             units[i].MoveToPosition(movePos);
         }
+    }
+
+    void CreateSelectionPrefab(Vector3 pos)
+    {
+        Instantiate(SelectionMarkerPrefab, new Vector3(pos.x, 0.01f,pos.z), Quaternion.identity);
     }
 }
