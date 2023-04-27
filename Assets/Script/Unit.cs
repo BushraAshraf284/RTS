@@ -20,7 +20,7 @@ public class Unit : MonoBehaviour
 
     public void MoveToPosition(Vector2 position)
     {
-        agent.isStopped = true;
+        agent.isStopped = false;
         Debug.Log("Moving");
         agent.SetDestination(position);
     }
