@@ -537,7 +537,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e98f181515f73d49b5346b9bddc7b71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SelectionMarker: {fileID: 0}
+  SelectionMarkerPrefab: {fileID: 3065878383415343889, guid: c700785e0da0bf0488f74894883af00c, type: 3}
   layerMask:
     serializedVersion: 2
     m_Bits: 128

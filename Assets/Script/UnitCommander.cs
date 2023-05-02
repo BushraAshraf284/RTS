@@ -35,6 +35,7 @@ public class UnitCommander : MonoBehaviour
                     Debug.Log("Ground hit");
                    
                     MoveUnitsToPosition(hit.point, units);
+                    CreateSelectionPrefab(hit.point);
                     
                 }
             }
@@ -43,9 +44,10 @@ public class UnitCommander : MonoBehaviour
 
     void MoveUnitsToPosition(Vector3 movePos, Unit[] units)
     {
+        Vector3[] destinations = UnitMover.GetUnitGroupDestintion(movePos, units.Length,2);
         for(int i =0; i< units.Length; i++)
         {
-            units[i].MoveToPosition(movePos);
+            units[i].MoveToPosition(destinations[i]);
         }
     }
 
