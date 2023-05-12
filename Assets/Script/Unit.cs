@@ -18,7 +18,7 @@ public class Unit : MonoBehaviour
         SelectionVisual.SetActive(toggle);
     }
 
-    public void MoveToPosition(Vector2 position)
+    public void MoveToPosition(Vector3 position)
     {
         agent.isStopped = false;
         Debug.Log("Moving");
